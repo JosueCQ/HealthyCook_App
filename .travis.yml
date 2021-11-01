@@ -3,7 +3,7 @@ jdk:
   - openjdk8
 before_install:
   - chmod +x mvnw
-script: ./mvnw clean install
+script: "./mvnw clean install"
 notifications:
   email: samm85299@gmail.com
 
