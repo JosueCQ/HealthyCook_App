@@ -4,6 +4,8 @@ jdk:
 script: "./mvnw clean install"
 notifications:
   email: samm85299@gmail.com
+install:
+  ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 before_install:
   - chmod +x mvnw
 
