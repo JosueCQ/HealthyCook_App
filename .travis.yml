@@ -2,9 +2,8 @@ language: java
 install: true
 jdk:
   - openjdk8
-before_install:
-  - chmod +x mvnw
-script: "./mvnw clean install"
+script:
+  - mvn install
 notifications:
   email: samm85299@gmail.com
 
