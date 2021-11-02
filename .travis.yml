@@ -1,13 +1,11 @@
-language: java
-sudo: true
 dist: trusty
-jdk: oraclejdk9
-addons:
-  apt:
-    packages:
-      - oracle-java9-installer
+language: java
+jdk: oraclejdk8
+services:
+  - mysql
 before_install:
-  - chmod +x mvnw
+  - - chmod +x mvnw
+script: mvn test -Dspring.profiles.active=mysql-travis
 notifications:
   email: lucianolopez4000@hotmail.com
 
