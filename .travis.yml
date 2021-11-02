@@ -1,12 +1,8 @@
-dist: trusty
+git:
+  depth: 3
 language: java
-jdk: oraclejdk8
-services:
-  - mysql
+jdk:
+  - oraclejdk8
 before_install:
-  - - chmod +x mvnw
-script: mvn test -Dspring.profiles.active=mysql-travis
-notifications:
-  email: lucianolopez4000@hotmail.com
-
+  - chmod +x mvnw
 
