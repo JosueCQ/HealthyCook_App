@@ -1,9 +1,13 @@
 language: java
-jdk:
-  - openjdk14
+sudo: true
+dist: trusty
+jdk: oraclejdk9
+addons:
+  apt:
+    packages:
+      - oracle-java9-installer
 before_install:
   - chmod +x mvnw
-script: "./mvnw clean install"
 notifications:
   email: lucianolopez4000@hotmail.com
 
