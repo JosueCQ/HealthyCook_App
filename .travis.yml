@@ -12,6 +12,9 @@ before_script:
 script:
   - ng lint
   - ng build --prod --base-href https://t-palmer.github.io/travis-demo/
-  "test-headless": "ng test --watch=false --browsers=ChromeHeadless"
+  "ng test --watch=false --browsers=ChromeHeadless",
+  "./mvnw clean install"
+before_install:
+  - chmod +x mvnw
 notifications:
   email: lucianolopez4000@hotmail.com
