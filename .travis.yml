@@ -12,3 +12,6 @@ before_script:
 script:
   - ng lint
   - ng build --prod --base-href https://t-palmer.github.io/travis-demo/
+  "test-headless": "ng test --watch=false --browsers=ChromeHeadless"
+notifications:
+  email: lucianolopez4000@hotmail.com
