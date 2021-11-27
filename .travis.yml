@@ -1,10 +1,13 @@
 language: java
 jdk:
-  - openjdk8
+- openjdk8
 before_install:
-  - chmod +x mvnw
+- chmod +x mvnw
 script: "./mvnw clean install"
 notifications:
   email: samm85299@gmail.com
-
-
+deploy:
+  app: healthycookapp2021
+  provider: heroku
+  api_key:
+    secure: PqtMO7JZOZm/5BbCEIHBCNUjTKbbQ5bdw/U5iWRpJOdz0dzT/Fz9E5nQSC8iwTHxlZLs1Dwu+cYA74ipiIMA2wHFaGHStPYvavpyfR5PVRn3zKcK0968NkJT6ucIHKMNs4c7bGJu4HeF9uknKRE8Gv/v6TAnjsnF4mJLy9AWScx1kODak9JG9DArOpSHQkRof0vtHe8nGwCuWl8WwIpqUJnutGU9bwdIKxNumWW6F4UXJPDGTrfxGM57QxjSprUfHhWQLWtZL1dC44DDM2EWNJTz2y1EK4gmGzPrkmNxwuXAHRa3KUMX+q9fjPekiZFeyetLHhWoxusQzuFQINy0h04GWWzXlwKJ9hFtCyztWBzDnAWg1nehrTsRLFC2I5gxcAc0H1ztI9j0EqZ6svnj38JWktV2kGYL4D5R2enNRo2g5LrLTXTX9mp6TDUg6j+MTcqXX8GdqrwrEGpvDVN6GtGVQ0Tzn8qHpJoaiFiPAfyw6D4lb6GKK4INJfE+fBbkpqGTtOLMLo5JD8BqvuvF0wP5VmC0sErxxQ0RVaP7izdJQJPKU0UCxJ5TSf1wd9HM3s2t9cvfyavzXv+ijy+b6YafQXBM1QywpUJWx0kldUyTnrZGoJdYWTzCeRKtF0DDrI1IFOnTTOUx6YGFDiVVwxWUJ7SxfOcL2Wbd4Qu1rzc=
